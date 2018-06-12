@@ -172,7 +172,7 @@ def output_to_db_uac(postgres_path, db_password, db_table):
         print(e)
 
 if __name__ == '__main__':    # Check that this whole script is actually being run directly (as the main script) Then run the below
-    adwords_client = adwords.AdWordsClient.LoadFromStorage('/home/analytics/master_procedure/pg_obfuscator/sql/PG_DBScripts/adwords/googleads.yaml')
+    adwords_client = adwords.AdWordsClient.LoadFromStorage('./googleads.yaml')
 
     db_table = 'reports.sem_adgroup_raw_upload'   # 'reports.tmp_mt_paid_search_raw_upload'  # lookup_paid_search_raw_upload
     db_password = keyring.get_password('DB_NAME', 'USER')
